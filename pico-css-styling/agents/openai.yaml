@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pico CSS Styling"
+  short_description: "Use Pico CSS cleanly and predictably"
+  default_prompt: "Use $pico-css-styling to style this page with Pico CSS first and add custom CSS only where needed."
