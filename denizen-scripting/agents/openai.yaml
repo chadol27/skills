@@ -1,0 +1,4 @@
+interface:
+  display_name: "Denizen Scripting"
+  short_description: "Write and review Denizen scripts"
+  default_prompt: "Use $denizen-scripting to implement or review a Denizen script safely."
