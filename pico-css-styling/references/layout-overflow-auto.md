@@ -8,6 +8,7 @@ Use `.overflow-auto` when content can exceed the width of its container and shou
 
 - `.overflow-auto` enables automatic scrollbars only when content exceeds the element's bounds.
 - Pico documents it mainly for responsive tables.
+- Wrap wide tables in `.overflow-auto` instead of forcing the table to collapse or shrinking table text.
 - This is the first fix to try before rewriting wide content into another pattern.
 
 ## Syntax
