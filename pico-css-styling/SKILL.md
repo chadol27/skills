@@ -1,6 +1,6 @@
 ---
 name: pico-css-styling
-description: Style pages and UI with Pico CSS using semantic HTML and minimal custom CSS. Use when Codex needs to build or restyle interfaces with Pico CSS, start from Pico's default element styling, structure layouts with containers, sections, and articles, style forms, tables, and navigation semantically, or extend Pico without fighting the framework.
+description: Style pages and UI with Pico CSS using semantic HTML and minimal custom CSS. Use when Codex needs to build or restyle interfaces with Pico CSS, start from Pico's default element styling, structure layouts with containers, sections, and articles, style forms, tables, and navigation semantically, customize Pico with Sass or color utilities, or extend Pico without fighting the framework.
 ---
 
 # Pico CSS Styling
@@ -67,7 +67,12 @@ For dense interfaces, reduce complexity on mobile by stacking sections, collapsi
 
 ## Official Reference Map
 
-Use the files in `references/` as the primary local mirror of Pico's official docs for these sections. They are grouped by the official table of contents and intentionally exclude `Getting started` and `Customization`.
+Use the files in `references/` as the primary local mirror of Pico's official docs for these sections. They are grouped by the official table of contents and intentionally exclude `Getting started`.
+
+### Customization
+
+- `Sass`: `references/customization-sass.md`
+- `Colors`: `references/customization-colors.md`
 
 ### Layout
 
@@ -116,7 +121,7 @@ Use these doc areas:
 - Content: typography, links, buttons, and tables
 - Forms: overview plus each native control type
 - Components: accordion, card, dropdown, group, loading, modal, nav, progress, and tooltip
-- Colors: named color scale and color utility guidance when color-specific styling comes up
+- Customization: Sass compilation, module selection, theme color, custom themes, color utilities, and named color scales
 
 Official docs: `https://picocss.com/docs`
 
@@ -129,7 +134,9 @@ Follow this order:
 2. Apply Pico stylesheet.
 3. Check whether Pico's defaults already solve most of the UI.
 4. Pull the matching reference file from `references/` based on the official Pico docs section and page name.
-5. Add narrowly scoped custom CSS only for gaps Pico does not cover.
+5. If the project needs a smaller build, classless output, primary theme color changes, or a custom Pico theme, read `references/customization-sass.md` before writing overrides.
+6. If the project needs Pico color utility classes, named color tokens, or Sass color variables, read `references/customization-colors.md` before adding color CSS.
+7. Add narrowly scoped custom CSS only for gaps Pico does not cover.
 
 ## Output Expectations
 
