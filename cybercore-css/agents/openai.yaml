@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cybercore CSS"
+  short_description: "Build UI with Cybercore CSS"
+  default_prompt: "Use $cybercore-css to style this interface with Cybercore CSS components and utilities."
