@@ -1,0 +1,4 @@
+interface:
+  display_name: "OverPy"
+  short_description: "Write and maintain reliable OverPy .opy scripts"
+  default_prompt: "Use $overpy to write or revise an OverPy .opy script and validate its syntax."
