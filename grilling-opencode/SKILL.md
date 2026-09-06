@@ -35,8 +35,11 @@ Do not silently choose defaults merely to advance the tree.
 The session is done only when:
 
 1. every reachable branch of the design tree has been visited;
-2. no decision remains silently assumed;
-3. the frontier is empty; and
-4. you summarize the resulting shared understanding and ask the user, using OpenCode's `question` feature, to confirm that the design is correct and complete.
+2. no decision remains silently assumed; and
+3. the frontier is empty.
 
-Do **not** implement, modify files, execute the resulting plan, or otherwise act on the design until the user explicitly confirms that shared understanding.
+Once the frontier is empty, summarize the resulting shared understanding and the final plan in **ordinary chat**. Then ask the user in ordinary chat to confirm that the design and plan are correct and complete.
+
+Do **not** use OpenCode's `question` feature for this final confirmation.
+
+Do **not** implement, modify files, execute the resulting plan, or otherwise act on the design until the user explicitly confirms the final plan in chat.
