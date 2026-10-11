@@ -39,7 +39,7 @@ Inside tags, raw `<` and `>` can collide with tag syntax. Prefer named compariso
 - `/ex` creates a new queue each time, so queue-local definitions usually disappear immediately after that command.
 - `/exs` creates a sustained queue and can preserve queue state between executions, but waits can block that sustained queue.
 - `/denizen debug` toggles Denizen debug output.
-- Add `debug: false` to individual script containers to reduce spam while keeping global debug available.
+- The skill's convention requires `debug: false` on every new `world`, `task`, `command`, and `procedure` container. This is a per-container setting; avoid globally disabling debug while troubleshooting.
 - Avoid globally disabling debug when troubleshooting, because it can hide real errors.
 - `/denizen debug -r` plus `/denizen submit` records and shares debug output for support.
 

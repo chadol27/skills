@@ -12,6 +12,13 @@ Base docs:
 - Language Explanations: `https://meta.denizenscript.com/Docs/Languages`
 - NPC Actions: `https://meta.denizenscript.com/Docs/Actions`
 
+## Reference Freshness
+
+- These summaries are navigation aids; official Meta/Guide documentation and the target server build are authoritative.
+- Re-open the relevant official page for syntax-sensitive work instead of relying only on remembered syntax or a summary.
+- When changing a reference summary, add or update a source link and a `Checked: YYYY-MM-DD` note beside the affected section. Date only material that was actually verified; do not imply the entire file was re-audited.
+- For addon features, consult that addon's maintained documentation and confirm the installed addon/version. Denizen Meta docs do not establish that a third-party addon is installed.
+
 ## Decision Map
 
 - Need to make something happen: use Commands.
