@@ -27,6 +27,7 @@ description: Write, edit, review, migrate, and troubleshoot DenizenScript for Mi
 ## Implementation Rules
 
 - Keep new reusable behavior in a `task` when multiple events or commands call the same logic.
+- Name every new container `file_name__container_name`, using the `.dsc` filename without its extension as `file_name` (for example, `core_patterns__notify_task`). Apply this to newly created containers only; do not rename existing containers unless asked.
 - Include `debug: false` in every new `world`, `task`, `command`, and `procedure` container created by this skill.
 - Use two spaces per indentation level in every Denizen script and code example.
 - Guard `context.args.size` before any `context.args.get[n]` access.
@@ -48,6 +49,7 @@ description: Write, edit, review, migrate, and troubleshoot DenizenScript for Mi
 - New `world`, `task`, `command`, and `procedure` containers include `debug: false`.
 - Denizen script indentation advances in two-space increments and uses spaces, not tabs.
 - Script container names are unique across the scripts folder.
+- New container names follow `file_name__container_name`; existing names are preserved unless a rename is requested.
 - Targeted text searches for risky patterns were reviewed; search results are evidence for manual review, not a Denizen parser/linter result.
 - Long waits use the intended time unit and `system` when real elapsed time matters.
 - Flags used for cancellation or race control are cleared or tokenized.

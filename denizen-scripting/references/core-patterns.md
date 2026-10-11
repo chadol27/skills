@@ -15,7 +15,7 @@ Use two spaces for each indentation level in Denizen code examples and scripts.
 Task container:
 
 ```yaml
-example_task:
+core_patterns__example_task:
   type: task
   debug: false
   script:
@@ -25,18 +25,18 @@ example_task:
 World event container:
 
 ```yaml
-example_events:
+core_patterns__example_events:
   type: world
   debug: false
   events:
     after player joins:
-    - run example_task
+    - run core_patterns__example_task
 ```
 
 Command container:
 
 ```yaml
-example_command:
+core_patterns__example_command:
   type: command
   debug: false
   name: example
@@ -54,7 +54,7 @@ example_command:
 Procedure container:
 
 ```yaml
-example_check:
+core_patterns__example_check:
   type: procedure
   debug: false
   definitions: input
@@ -83,20 +83,20 @@ Source: [Meta `run` command](https://meta.denizenscript.com/Docs/Commands/run) â
 `run` starts a new queue. Definitions in the caller do not automatically exist in that queue; pass only the values the target task needs. Prefer named definitions for clarity:
 
 ```yaml
-notify_task:
+core_patterns__notify_task:
   type: task
   debug: false
   definitions: message
   script:
   - narrate <[message]>
 
-notify_events:
+core_patterns__notify_events:
   type: world
   debug: false
   events:
     after player joins:
     - define message "<player.name> joined"
-    - run notify_task def.message:<[message]>
+    - run core_patterns__notify_task def.message:<[message]>
 ```
 
 Avoid inline quoted `def:` values for strings with spaces when the local server has shown parser sensitivity.
@@ -112,7 +112,7 @@ Avoid inline quoted `def:` values for strings with spaces when the local server 
 Example of multiple named values:
 
 ```yaml
-- run notify_task def.message:<[message]> def.source:startup
+- run core_patterns__notify_task def.message:<[message]> def.source:startup
 ```
 
 Avoid assuming a child queue will inherit queue-local definitions. Use explicit definitions for data and flags or another persistent store only when state genuinely must cross queues or survive longer.
