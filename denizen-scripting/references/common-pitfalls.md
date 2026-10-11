@@ -39,6 +39,19 @@ If a message has spaces or user-facing text, define it first:
 
 Avoid passing quoted messages inline through `def:` when reload logs show `Run command path is missing required 'path:' prefix`, invalid script-name errors, or `Must define a SCRIPT to be run`.
 
+## Determine And Queue Flow
+
+Source: [Meta `determine` command](https://meta.denizenscript.com/Docs/Commands/determine) — **Checked: 2026-10-11**.
+
+`determine` sets the script's outcome and ends the current queue by default, similarly to `stop`. If commands must continue afterward, use `determine passively`:
+
+```yaml
+- determine passively cancelled
+- narrate "This command still runs"
+```
+
+Without `passively`, commands after `determine` will not run. For a procedure, ending the queue after determining its result is normally intended. If making multiple determinations in one queue, use `passively` on each determination that must not end that queue.
+
 ## Timers And Cancellation
 
 For long real-world timers, use `wait ... system` and tokenized flags:

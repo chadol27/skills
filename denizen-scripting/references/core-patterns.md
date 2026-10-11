@@ -123,6 +123,7 @@ Avoid assuming a child queue will inherit queue-local definitions. Use explicit 
 - Use `on` when the script must cancel or determine the event outcome.
 - Keep event lines static; do not put runtime tags in the event line.
 - Use context tags only inside the event or command context that provides them.
+- `determine` ends the current queue by default. Add `passively` if commands after the determination must still run; omit it when ending the queue is intended (such as returning from a procedure).
 
 ## Web/API Calls
 

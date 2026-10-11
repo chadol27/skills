@@ -36,6 +36,7 @@ description: Write, edit, review, migrate, and troubleshoot DenizenScript for Mi
 - Use server flags for cross-queue or persistent state. Use definitions for queue-local temporary values.
 - For web/API work, prefer secret-backed URLs or headers when the project already has a secret, and use `~webget` for network calls.
 - For event cancellation or determinations, confirm whether the event must be `on` rather than `after`.
+- Remember that `determine` ends the current queue by default; use `determine passively` when the script must continue running commands afterward.
 - Do not assume a command, tag, event, context, mechanism, or addon feature exists on the target server: check exact Meta docs and version/addon availability before using it.
 - Never include credentials or secret values in scripts, examples, logs, or commits. Reuse configured Denizen secrets; do not inspect secret files to discover values.
 - For API calls, verify HTTP method, headers/data format, waitability, saved-entry tags, and failure/status handling against the current `webget` documentation.
@@ -46,6 +47,7 @@ description: Write, edit, review, migrate, and troubleshoot DenizenScript for Mi
 - Event lines are static text and contain no runtime tags.
 - Every indexed context argument is guarded before access.
 - `run` calls pass definitions in a parser-safe shape.
+- A `determine` that should not end the current queue uses `passively`.
 - New `world`, `task`, `command`, and `procedure` containers include `debug: false`.
 - Denizen script indentation advances in two-space increments and uses spaces, not tabs.
 - Script container names are unique across the scripts folder.
